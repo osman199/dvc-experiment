@@ -7,6 +7,7 @@ stages:
     outs:
     - data/prepared/test.csv
     - data/prepared/train.csv
+
   featurise:
     cmd: python src/create_features.py
     deps:
@@ -16,6 +17,7 @@ stages:
     outs:
     - data/features/test_features.csv
     - data/features/train_features.csv
+
   train:
     cmd: python src/train_model.py
     deps:
@@ -24,6 +26,7 @@ stages:
     - src/train_model.py
     outs:
     - model/model.pickle
+    
   evaluate:
     cmd: python src/evaluate.py
     deps:
