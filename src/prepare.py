@@ -16,7 +16,7 @@ df['MEDV'] = data.target
 df.to_csv(str(Config.ORIGINAL_DATASET_FILE_PATH), sep = ',', index = False)
 
 
-df_train, df_test = train_test_split( df, test_size=0.2, random_state=28750 )
+df_train, df_test = train_test_split( df, test_size=0.3, random_state=28750 )
 
 #df = pd.read_csv(str(Config.ORIGINAL_DATASET_FILE_PATH))
 
