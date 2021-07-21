@@ -17,7 +17,7 @@ data = load_boston()
 df = pd.DataFrame(data=data['data'], columns = data['feature_names'])
 df['Target'] = data.target
 
-df.to_csv(str(Config.ORIGINAL_DATASET_FILE_PATH), sep = ',', index = False)
+df.to_csv(str(Config.ORIGINAL_DATASET_FILE_PATH / "boston.csv"), sep = ',', index = False)
 
 
 df_train, df_test = train_test_split( df, test_size=params["split"], random_state=params["seed"] )
