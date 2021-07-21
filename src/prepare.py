@@ -15,7 +15,7 @@ params = yaml.safe_load(open('params.yaml'))['prepare']
 load_boston(str(Config.ORIGINAL_DATASET_FILE_PATH))
 data = load_boston()
 df = pd.DataFrame(data=data['data'], columns = data['feature_names'])
-df['MEDV'] = data.target
+df['Target'] = data.target
 
 df.to_csv(str(Config.ORIGINAL_DATASET_FILE_PATH), sep = ',', index = False)
 
